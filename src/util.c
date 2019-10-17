@@ -30,8 +30,8 @@
 #endif
 
 #if SDL_VERSION_ATLEAST(2, 0, 0)
-#include "SDL_video.h"
-#include "SDL_messagebox.h"
+#include <SDL2/SDL_video.h>
+#include <SDL2/SDL_messagebox.h>
 #endif
 
 void

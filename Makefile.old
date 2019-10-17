@@ -20,8 +20,8 @@ FILES = rixplay.cpp text.c font.c itemmenu.c scene.c palcommon.c script.c \
 FILES += $(ADPLUG_FILES)
 FILES += $(LIBMAD_FILES)
 
-CFLAGS = `sdl2-config --cflags` -g -Wall -O2 -fno-strict-aliasing
-LDFLAGS = `sdl2-config --libs` -lstdc++ -lm
+CFLAGS = `sdl-config --cflags` -g -Wall -O2 -fno-strict-aliasing
+LDFLAGS = `sdl-config --libs` -lstdc++ -lm
 
 $(TARGET):
 	$(HOST)gcc $(CFLAGS) -o $(TARGET) $(FILES) $(LDFLAGS)

@@ -22,7 +22,7 @@
 #define _COMMON_H
 
 //#define PAL_WIN95          1 // not valid for now
-//#define PAL_CLASSIC        1
+#define PAL_CLASSIC        1
 
 #ifdef __cplusplus
 extern "C"
@@ -37,8 +37,8 @@ extern "C"
 #include <stdarg.h>
 #include <assert.h>
 
-#include "SDL.h"
-#include "SDL_endian.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_endian.h>
 
 #ifdef _SDL_stdinc_h
 #define malloc       SDL_malloc

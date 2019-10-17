@@ -1,0 +1,818 @@
+[
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/adplug/rix.cpp"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/adplug/rix.cpp"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/adplug/fprovide.cpp"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/adplug/fprovide.cpp"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/libmad/bit.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/libmad/bit.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/font.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/font.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/libmad/layer3.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/libmad/layer3.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/libmad/stream.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/libmad/stream.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/libmad/frame.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/libmad/frame.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/libmad/layer12.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/libmad/layer12.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/game.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/game.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/palette.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/palette.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/fight.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/fight.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/input.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/input.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/text.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/text.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/battle.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/battle.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/global.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/global.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/uigame.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/uigame.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/main.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/main.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/adplug/player.cpp"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/adplug/player.cpp"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/rngplay.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/rngplay.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/getopt.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/getopt.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/map.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/map.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/video.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/video.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/adplug/binfile.cpp"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/adplug/binfile.cpp"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/ui.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/ui.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/magicmenu.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/magicmenu.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/palcommon.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/palcommon.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/util.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/util.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/libmad/timer.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/libmad/timer.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/adplug/binio.cpp"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/adplug/binio.cpp"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/sound.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/sound.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/uibattle.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/uibattle.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/res.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/res.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/adplug/emuopl.cpp"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/adplug/emuopl.cpp"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/adplug/dosbox_opl.cpp"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/adplug/dosbox_opl.cpp"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/libmad/synth.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/libmad/synth.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/play.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/play.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/itemmenu.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/itemmenu.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/ending.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/ending.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/adplug/surroundopl.cpp"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/adplug/surroundopl.cpp"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/libmad/music_mad.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/libmad/music_mad.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/libmad/decoder.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/libmad/decoder.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/yj1.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/yj1.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/script.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/script.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/libmad/fixed.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/libmad/fixed.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/rixplay.cpp"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/rixplay.cpp"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/libmad/huffman.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/libmad/huffman.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/scene.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/scene.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-D_REENTRANT",
+            "-g",
+            "-Wall",
+            "-O2",
+            "-fno-strict-aliasing",
+            "-o",
+            "sdlpal",
+            "src/adplug/fmopl.c"
+        ],
+        "directory": "/home/kyyn/Developer/sdlpal",
+        "file": "src/adplug/fmopl.c"
+    }
+]

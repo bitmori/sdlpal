@@ -4,24 +4,24 @@ TARGET = sdlpal
 
 HOST =
 
-ADPLUG_FILES = adplug/rix.cpp adplug/player.cpp adplug/binio.cpp \
-	adplug/fprovide.cpp adplug/binfile.cpp adplug/dosbox_opl.cpp \
-	adplug/fmopl.c adplug/surroundopl.cpp adplug/emuopl.cpp
+ADPLUG_FILES = src/adplug/rix.cpp src/adplug/player.cpp src/adplug/binio.cpp \
+	src/adplug/fprovide.cpp src/adplug/binfile.cpp src/adplug/dosbox_opl.cpp \
+	src/adplug/fmopl.c src/adplug/surroundopl.cpp src/adplug/emuopl.cpp
 
-LIBMAD_FILES = libmad/bit.c libmad/decoder.c libmad/fixed.c libmad/frame.c \
-	libmad/huffman.c libmad/layer12.c libmad/layer3.c libmad/music_mad.c \
-	libmad/stream.c libmad/synth.c libmad/timer.c
+LIBMAD_FILES = src/libmad/bit.c src/libmad/decoder.c src/libmad/fixed.c src/libmad/frame.c \
+	src/libmad/huffman.c src/libmad/layer12.c src/libmad/layer3.c src/libmad/music_mad.c \
+	src/libmad/stream.c src/libmad/synth.c src/libmad/timer.c
 
-FILES = rixplay.cpp text.c font.c itemmenu.c scene.c palcommon.c script.c \
-	util.c play.c getopt.c input.c uibattle.c game.c magicmenu.c map.c \
-	ending.c uigame.c rngplay.c ui.c global.c main.c fight.c \
-	video.c palette.c sound.c res.c battle.c yj1.c
+FILES = src/rixplay.cpp src/text.c src/font.c src/itemmenu.c src/scene.c src/palcommon.c src/script.c \
+	src/util.c src/play.c src/getopt.c src/input.c src/uibattle.c src/game.c src/magicmenu.c src/map.c \
+	src/ending.c src/uigame.c src/rngplay.c src/ui.c src/global.c src/main.c src/fight.c \
+	src/video.c src/palette.c src/sound.c src/res.c src/battle.c src/yj1.c
 
 FILES += $(ADPLUG_FILES)
 FILES += $(LIBMAD_FILES)
 
-CFLAGS = `sdl-config --cflags` -g -Wall -O2 -fno-strict-aliasing
-LDFLAGS = `sdl-config --libs` -lstdc++ -lm
+CFLAGS = `sdl2-config --cflags` -g -Wall -O2 -fno-strict-aliasing
+LDFLAGS = `sdl2-config --libs` -lstdc++ -lm
 
 $(TARGET):
 	$(HOST)gcc $(CFLAGS) -o $(TARGET) $(FILES) $(LDFLAGS)
