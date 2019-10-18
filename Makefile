@@ -20,8 +20,8 @@ FILES = src/rixplay.cpp src/text.c src/font.c src/itemmenu.c src/scene.c src/pal
 FILES += $(ADPLUG_FILES)
 FILES += $(LIBMAD_FILES)
 
-CFLAGS = `sdl2-config --cflags` -g -Wall -O2 -fno-strict-aliasing -Imruby/include
-LDFLAGS = `sdl2-config --libs` -lstdc++ -lm -Lmruby/build/host/lib
+CFLAGS = `sdl2-config --cflags` -g -Wall -O2 -fno-strict-aliasing -Isrc/mruby/include
+LDFLAGS = `sdl2-config --libs` -lstdc++ -lm -Lsrc/mruby/build/host/lib -lmruby -lmruby_core
 
 .PHONY: all clean prepare
 

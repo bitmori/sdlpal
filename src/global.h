@@ -25,6 +25,7 @@
 #include "common.h"
 #include "map.h"
 #include "ui.h"
+#include "mruby.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -105,6 +106,8 @@ typedef enum tagSTATUS
 #ifndef PAL_CLASSIC
 #define kStatusParalyzed kStatusSleep
 #endif
+
+typedef mrb_state *LPMRBSTATE;
 
 // body parts of equipments
 typedef enum tagBODYPART
@@ -513,6 +516,7 @@ typedef struct tagPOISONSTATUS
 
 typedef struct tagGLOBALVARS
 {
+   LPMRBSTATE       mrb; // MRuby
    FILES            f;
    GAMEDATA         g;
 
@@ -768,6 +772,11 @@ VOID
 PAL_PlayerLevelUp(
    WORD          wPlayerRole,
    WORD          wNumLevel
+);
+
+WORD
+PAL_ExecuteMRubyScript(
+   WORD          wScriptID
 );
 
 #ifdef __cplusplus

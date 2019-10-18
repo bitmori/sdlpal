@@ -397,11 +397,12 @@ PAL_MRubySelectionMenu(VOID) {
 
    if (wReturnValue != MENUITEM_VALUE_CANCELLED)
    {
+      PAL_ExecuteMRubyScript(wReturnValue);
       // TODO execute mruby script here!
-      extern SDL_Window *gpWindow;
-      char str[256];
-      sprintf(str, "The script #%d", wReturnValue);
-      SDL_ShowSimpleMessageBox(0, "Execute ruby script", str, gpWindow);
+      // extern SDL_Window *gpWindow;
+      // char str[256];
+      // sprintf(str, "The script #%d", wReturnValue);
+      // SDL_ShowSimpleMessageBox(0, "Execute ruby script", str, gpWindow);
    }
 }
 

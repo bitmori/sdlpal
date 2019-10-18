@@ -642,8 +642,12 @@ main(
    //
    // Show the trademark screen and splash screen
    //
-   //PAL_TrademarkScreen();
-   //PAL_SplashScreen();
+#ifdef PAL_SHOW_LOGO
+   PAL_TrademarkScreen();
+#endif
+#ifdef PAL_SHOW_CRANES
+   PAL_SplashScreen();
+#endif
 
    //
    // Run the main game routine

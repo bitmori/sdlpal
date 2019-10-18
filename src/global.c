@@ -63,6 +63,8 @@ PAL_InitGlobals(
       }
    }
 
+   // open mruby
+   gpGlobals->mrb = mrb_open();
    //
    // Open files
    //
@@ -133,6 +135,8 @@ PAL_FreeGlobals(
 #ifndef PAL_WIN95
       PAL_FreeObjectDesc(gpGlobals->lpObjectDesc);
 #endif
+      // Release MRuby
+      mrb_close(gpGlobals->mrb);
       //
       // Delete the instance
       //
@@ -1888,4 +1892,16 @@ PAL_PlayerLevelUp(
    gpGlobals->Exp.rgPrimaryExp[wPlayerRole].wExp = 0;
    gpGlobals->Exp.rgPrimaryExp[wPlayerRole].wLevel =
       gpGlobals->g.PlayerRoles.rgwLevel[wPlayerRole];
+}
+
+
+WORD
+PAL_ExecuteMRubyScript(
+   WORD wScriptID
+) {
+   /* write some code */
+   char code[] = "p 'Hello world!'";
+   /* use it to execute code from string */
+   mrb_load_string(gpGlobals->mrb, code);
+   return 0;
 }
