@@ -26,6 +26,9 @@
 #include "map.h"
 #include "ui.h"
 #include "mruby.h"
+#include "mruby/compile.h"
+#include "mruby/error.h"
+#include "mruby/string.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -108,6 +111,8 @@ typedef enum tagSTATUS
 #endif
 
 typedef mrb_state *LPMRBSTATE;
+typedef struct RClass *LPMRUBYCLASS;
+typedef mrb_value MRUBYVALUE;
 
 // body parts of equipments
 typedef enum tagBODYPART
@@ -778,6 +783,9 @@ WORD
 PAL_ExecuteMRubyScript(
    WORD          wScriptID
 );
+
+VOID
+PAL_InitMRubyHandlers();
 
 #ifdef __cplusplus
 }
