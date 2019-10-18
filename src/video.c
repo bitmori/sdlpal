@@ -108,7 +108,7 @@ VIDEO_Init(
 #else
    gpWindow = SDL_CreateWindow("Pal",
       SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, wScreenWidth, wScreenHeight,
-      SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+      SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
 #endif
 
    if (gpWindow == NULL)

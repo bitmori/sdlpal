@@ -23,7 +23,7 @@
 
 //#define PAL_WIN95          1 // not valid for now
 #define PAL_CLASSIC        1
-
+#define PAL_HIDPI          1
 #ifdef __cplusplus
 extern "C"
 {

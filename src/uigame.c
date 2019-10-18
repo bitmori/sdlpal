@@ -363,6 +363,48 @@ PAL_SwitchMenu(
    return (wReturnValue == 0) ? FALSE : TRUE;
 }
 
+static VOID
+PAL_MRubySelectionMenu(VOID) {
+   LPBOX           lpBox;
+   WORD            wReturnValue;
+   const SDL_Rect  rect = {131, 100, 165, 50};
+
+   MENUITEM        rgMenuItem[5] = {
+      { 1,   BATTLESPEEDMENU_LABEL_1,       TRUE,   PAL_XY(145, 110) },
+      { 2,   BATTLESPEEDMENU_LABEL_2,       TRUE,   PAL_XY(170, 110) },
+      { 3,   BATTLESPEEDMENU_LABEL_3,       TRUE,   PAL_XY(195, 110) },
+      { 4,   BATTLESPEEDMENU_LABEL_4,       TRUE,   PAL_XY(220, 110) },
+      { 5,   BATTLESPEEDMENU_LABEL_5,       TRUE,   PAL_XY(245, 110) },
+   };
+
+   //
+   // Create the boxes
+   //
+   lpBox = PAL_CreateSingleLineBox(PAL_XY(131, 100), 8, TRUE);
+   VIDEO_UpdateScreen(&rect);
+
+   //
+   // Activate the menu
+   //
+   wReturnValue = PAL_ReadMenu(NULL, rgMenuItem, 5, 0, MENUITEM_COLOR);
+
+   //
+   // Delete the boxes
+   //
+   PAL_DeleteBox(lpBox);
+
+   VIDEO_UpdateScreen(&rect);
+
+   if (wReturnValue != MENUITEM_VALUE_CANCELLED)
+   {
+      // TODO execute mruby script here!
+      extern SDL_Window *gpWindow;
+      char str[256];
+      sprintf(str, "The script #%d", wReturnValue);
+      SDL_ShowSimpleMessageBox(0, "Execute ruby script", str, gpWindow);
+   }
+}
+
 #ifndef PAL_CLASSIC
 
 static VOID
@@ -517,14 +559,15 @@ PAL_SystemMenu(
    // Create menu items
    //
 #ifdef PAL_CLASSIC
-   MENUITEM        rgSystemMenuItem[5] =
+   MENUITEM        rgSystemMenuItem[6] =
    {
       // value  label                      enabled   pos
       { 1,      SYSMENU_LABEL_SAVE,        TRUE,     PAL_XY(53, 72) },
       { 2,      SYSMENU_LABEL_LOAD,        TRUE,     PAL_XY(53, 72 + 18) },
       { 3,      SYSMENU_LABEL_MUSIC,       TRUE,     PAL_XY(53, 72 + 36) },
       { 4,      SYSMENU_LABEL_SOUND,       TRUE,     PAL_XY(53, 72 + 54) },
-      { 5,      SYSMENU_LABEL_QUIT,        TRUE,     PAL_XY(53, 72 + 72) },
+      { 5,      SYSMENU_LABEL_MRUBY,       TRUE,     PAL_XY(53, 72 + 72) },
+      { 6,      SYSMENU_LABEL_QUIT,        TRUE,     PAL_XY(53, 72 + 90) },
    };
 #else
    MENUITEM        rgSystemMenuItem[6] =
@@ -543,7 +586,7 @@ PAL_SystemMenu(
    // Create the menu box.
    //
 #ifdef PAL_CLASSIC
-   lpMenuBox = PAL_CreateBox(PAL_XY(40, 60), 4, 3, 0, TRUE);
+   lpMenuBox = PAL_CreateBox(PAL_XY(40, 60), 5, 3, 0, TRUE);
 #else
    lpMenuBox = PAL_CreateBox(PAL_XY(40, 60), 5, 3, 0, TRUE);
 #endif
@@ -553,7 +596,7 @@ PAL_SystemMenu(
    // Perform the menu.
    //
 #ifdef PAL_CLASSIC
-   wReturnValue = PAL_ReadMenu(PAL_SystemMenu_OnItemChange, rgSystemMenuItem, 5,
+   wReturnValue = PAL_ReadMenu(PAL_SystemMenu_OnItemChange, rgSystemMenuItem, 6,
       gpGlobals->iCurSystemMenuItem, MENUITEM_COLOR);
 #else
    wReturnValue = PAL_ReadMenu(PAL_SystemMenu_OnItemChange, rgSystemMenuItem, 6,
@@ -642,18 +685,21 @@ PAL_SystemMenu(
       g_fNoSound = !PAL_SwitchMenu(!g_fNoSound);
       break;
 
-#ifndef PAL_CLASSIC
    case 5:
+#ifndef PAL_CLASSIC
       //
       // Battle Mode
       //
       PAL_BattleSpeedMenu();
+#else
+      //
+      // MRuby Menu
+      //
+      PAL_MRubySelectionMenu();
+#endif
       break;
 
    case 6:
-#else
-   case 5:
-#endif
       //
       // Quit
       //

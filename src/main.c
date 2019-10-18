@@ -617,6 +617,9 @@ main(
 #elif defined (__IOS__) || defined (__ANDROID__)
       wScreenWidth = 320;
       wScreenHeight = 200;
+#elif defined (PAL_HIDPI)
+      wScreenWidth = 640 * 3;
+      wScreenHeight = (fFullScreen ? 480 : 400) * 3;
 #else
       wScreenWidth = 640;
       wScreenHeight = fFullScreen ? 480 : 400;
@@ -639,8 +642,8 @@ main(
    //
    // Show the trademark screen and splash screen
    //
-   PAL_TrademarkScreen();
-   PAL_SplashScreen();
+   //PAL_TrademarkScreen();
+   //PAL_SplashScreen();
 
    //
    // Run the main game routine

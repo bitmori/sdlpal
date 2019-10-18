@@ -20,11 +20,22 @@ FILES = src/rixplay.cpp src/text.c src/font.c src/itemmenu.c src/scene.c src/pal
 FILES += $(ADPLUG_FILES)
 FILES += $(LIBMAD_FILES)
 
-CFLAGS = `sdl2-config --cflags` -g -Wall -O2 -fno-strict-aliasing
-LDFLAGS = `sdl2-config --libs` -lstdc++ -lm
+CFLAGS = `sdl2-config --cflags` -g -Wall -O2 -fno-strict-aliasing -Imruby/include
+LDFLAGS = `sdl2-config --libs` -lstdc++ -lm -Lmruby/build/host/lib
+
+.PHONY: all clean prepare
+
+all: $(TARGET) prepare
 
 $(TARGET):
 	$(HOST)gcc $(CFLAGS) -o $(TARGET) $(FILES) $(LDFLAGS)
+
+mruby:
+	cd src/mruby; make
+
+prepare: $(TARGET)
+	mkdir -p palgame
+	mv -f $(TARGET) palgame
 
 clean:
 	rm -f $(TARGET)
