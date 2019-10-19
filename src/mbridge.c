@@ -9,6 +9,15 @@ static MRUBYVALUE give_cash(LPMRBSTATE mrb, MRUBYVALUE self)
    return self;
 }
 
+static MRUBYVALUE set_exp_multiplier(LPMRBSTATE mrb, MRUBYVALUE self)
+{
+   mrb_value em;
+   mrb_get_args(mrb, "i", &em);
+   int m = mrb_fixnum(em);
+   gpGlobals->nExpMultiplier = abs(m);
+   return self;
+}
+
 static MRUBYVALUE lock_team(LPMRBSTATE mrb, MRUBYVALUE self) {
    gpGlobals->fLockTeamMember = TRUE;
    return self;
@@ -66,6 +75,7 @@ VOID PAL_InitMRubyHandlers()
 {
    LPMRUBYCLASS sdlpal_module = mrb_define_module(gpGlobals->mrb, "Sdlpal");
    mrb_define_module_function(gpGlobals->mrb, sdlpal_module, "give_cash", give_cash, MRB_ARGS_REQ(1));
+   mrb_define_module_function(gpGlobals->mrb, sdlpal_module, "set_exp_multiplier", set_exp_multiplier, MRB_ARGS_REQ(1));
    mrb_define_module_function(gpGlobals->mrb, sdlpal_module, "make_team", make_fantastic4, MRB_ARGS_NONE());
    mrb_define_module_function(gpGlobals->mrb, sdlpal_module, "lock_team", lock_team, MRB_ARGS_NONE());
    mrb_define_module_function(gpGlobals->mrb, sdlpal_module, "unlock_team", unlock_team, MRB_ARGS_NONE());

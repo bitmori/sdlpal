@@ -683,7 +683,7 @@ PAL_BattleWon(
       }
 
       dwExp = gpGlobals->Exp.rgPrimaryExp[w].wExp;
-      dwExp += g_Battle.iExpGained;
+      dwExp += (g_Battle.iExpGained * gpGlobals->nExpMultiplier);
 
       if (gpGlobals->g.PlayerRoles.rgwLevel[w] > MAX_LEVELS)
       {
@@ -832,7 +832,7 @@ PAL_BattleWon(
       {
 #define CHECK_HIDDEN_EXP(expname, statname, label)          \
 {                                                           \
-   dwExp = g_Battle.iExpGained;                             \
+   dwExp = g_Battle.iExpGained * gpGlobals->nExpMultiplier; \
    dwExp *= gpGlobals->Exp.expname[w].wCount;               \
    dwExp /= iTotalCount;                                    \
    dwExp *= 2;                                              \

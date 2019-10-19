@@ -569,6 +569,7 @@ typedef struct tagGLOBALVARS
    DWORD            dwFrameNum;
 
    BOOL             fLockTeamMember;
+   USHORT           nExpMultiplier;
 } GLOBALVARS, *LPGLOBALVARS;
 
 typedef struct tagSAVEDGAME
