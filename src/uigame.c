@@ -1259,7 +1259,7 @@ PAL_PlayerStatus(
          if (round > 0)
          {
                // draw this status
-               PAL_DrawText(PAL_GetWord(PAL_ADDITIONAL_WORD_FIRST+14+(j-kStatusPuppet)), PAL_XY(283, 8+kk*20), MENUITEM_COLOR_CONFIRMED, TRUE, FALSE);
+               PAL_DrawText(PAL_GetWord(PAL_ADDITIONAL_WORD_FIRST+13+(j-kStatusPuppet)), PAL_XY(283, 8+kk*20), MENUITEM_COLOR_CONFIRMED, TRUE, FALSE);
                PAL_DrawNumber(round, 2, PAL_XY(269, 12+kk*20), kNumColorBlue, kNumAlignRight);
                kk++;
          }
