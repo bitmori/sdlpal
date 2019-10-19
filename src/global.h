@@ -25,10 +25,7 @@
 #include "common.h"
 #include "map.h"
 #include "ui.h"
-#include "mruby.h"
-#include "mruby/compile.h"
-#include "mruby/error.h"
-#include "mruby/string.h"
+#include "mbridge.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -45,7 +42,7 @@ extern "C"
 //
 
 // maximum number of players in party
-#define     MAX_PLAYERS_IN_PARTY         3
+#define     MAX_PLAYERS_IN_PARTY         4
 
 // total number of possible player roles
 #define     MAX_PLAYER_ROLES             6
@@ -109,10 +106,6 @@ typedef enum tagSTATUS
 #ifndef PAL_CLASSIC
 #define kStatusParalyzed kStatusSleep
 #endif
-
-typedef mrb_state *LPMRBSTATE;
-typedef struct RClass *LPMRUBYCLASS;
-typedef mrb_value MRUBYVALUE;
 
 // body parts of equipments
 typedef enum tagBODYPART
@@ -778,14 +771,6 @@ PAL_PlayerLevelUp(
    WORD          wPlayerRole,
    WORD          wNumLevel
 );
-
-WORD
-PAL_ExecuteMRubyScript(
-   WORD          wScriptID
-);
-
-VOID
-PAL_InitMRubyHandlers();
 
 #ifdef __cplusplus
 }

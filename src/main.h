@@ -48,6 +48,7 @@
 #include "fight.h"
 #include "play.h"
 #include "game.h"
+#include "mbridge.h"
 
 #ifdef PAL_HAS_NATIVEMIDI
 #include "midi.h"

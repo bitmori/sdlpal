@@ -15,7 +15,7 @@ LIBMAD_FILES = src/libmad/bit.c src/libmad/decoder.c src/libmad/fixed.c src/libm
 FILES = src/rixplay.cpp src/text.c src/font.c src/itemmenu.c src/scene.c src/palcommon.c src/script.c \
 	src/util.c src/play.c src/getopt.c src/input.c src/uibattle.c src/game.c src/magicmenu.c src/map.c \
 	src/ending.c src/uigame.c src/rngplay.c src/ui.c src/global.c src/main.c src/fight.c \
-	src/video.c src/palette.c src/sound.c src/res.c src/battle.c src/yj1.c
+	src/video.c src/palette.c src/sound.c src/res.c src/battle.c src/yj1.c src/mbridge.c
 
 FILES += $(ADPLUG_FILES)
 FILES += $(LIBMAD_FILES)

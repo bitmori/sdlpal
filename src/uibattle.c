@@ -21,7 +21,7 @@
 
 #include "main.h"
 
-extern WORD g_rgPlayerPos[3][3][2];
+extern WORD g_rgPlayerPos[4][4][2];
 
 static int g_iCurMiscMenuItem = 0;
 static int g_iCurSubMenuItem = 0;
@@ -904,6 +904,11 @@ PAL_BattleUIUpdate(
             w = 0;
          }
 
+         if (gpGlobals->wMaxPartyMemberIndex >= 3) {
+            PAL_PlayerInfoBox(PAL_XY(14 + 77 * i, 165), wPlayerRole, w, j, FALSE);
+            continue;
+         }
+
          PAL_PlayerInfoBox(PAL_XY(91 + 77 * i, 165), wPlayerRole,
             w, j, FALSE);
       }
@@ -1022,7 +1027,13 @@ PAL_BattleUIUpdate(
             {SPRITENUM_BATTLEICON_COOPMAGIC, PAL_XY(54, 155), kBattleUIActionCoopMagic},
             {SPRITENUM_BATTLEICON_MISCMENU,  PAL_XY(27, 170), kBattleUIActionMisc}
          };
-
+         if (gpGlobals->wMaxPartyMemberIndex >= 3)
+         {
+            for (i = 0; i < 4; i++)
+            {
+               rgItems[i].pos -= (37 << 16);
+            }
+         }
          if (g_Battle.UI.MenuState == kBattleMenuMain)
          {
             if (g_InputState.dir == kDirNorth)
