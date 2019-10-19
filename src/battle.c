@@ -28,7 +28,7 @@ g_rgPlayerPos[4][4][2] = {
    {{240, 170}},                         // one player
    {{200, 176}, {256, 152}},             // two players
    {{180, 180}, {234, 170}, {270, 146}},  // three players
-   {{160, 180}, {210, 170}, {270, 155}, {285, 130}},    // four players
+   {{160, 180}, {210, 170}, {270, 155}, {287, 127}},    // four players
 };
 
 
@@ -1212,6 +1212,7 @@ PAL_StartBattle(
          g_Battle.rgEnemy[i].wScriptOnBattleEnd = gpGlobals->g.rgObject[w].enemy.wScriptOnBattleEnd;
          g_Battle.rgEnemy[i].wScriptOnReady = gpGlobals->g.rgObject[w].enemy.wScriptOnReady;
          g_Battle.rgEnemy[i].iColorShift = 0;
+         g_Battle.rgEnemy[i].dwMaxHealth = g_Battle.rgEnemy[i].e.wHealth;
 
 #ifndef PAL_CLASSIC
          g_Battle.rgEnemy[i].flTimeMeter = 50;

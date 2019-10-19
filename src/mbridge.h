@@ -11,15 +11,8 @@ typedef mrb_state *LPMRBSTATE;
 typedef mrb_value MRUBYVALUE;
 typedef struct RClass *LPMRUBYCLASS;
 
+WORD PAL_ExecuteMRubyScript(WORD wScriptID);
 
-MRUBYVALUE
-give_cash(mrb_state* mrb, mrb_value self);
+VOID PAL_InitMRubyHandlers();
 
-WORD
-PAL_ExecuteMRubyScript(
-   WORD          wScriptID
-);
-
-VOID
-PAL_InitMRubyHandlers();
 #endif

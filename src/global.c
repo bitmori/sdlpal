@@ -558,6 +558,7 @@ PAL_InitGameData(
    gpGlobals->fNeedToFadeIn = FALSE;
    gpGlobals->iCurInvMenuItem = 0;
    gpGlobals->fInBattle = FALSE;
+   gpGlobals->fLockTeamMember = FALSE;
 
    memset(gpGlobals->rgPlayerStatus, 0, sizeof(gpGlobals->rgPlayerStatus));
 
@@ -1877,7 +1878,7 @@ PAL_PlayerLevelUp(
       gpGlobals->g.PlayerRoles.rgwFleeRate[wPlayerRole] += 2;
    }
 
-#define STAT_LIMIT(t) { if ((t) > 999) (t) = 999; }
+#define STAT_LIMIT(t) { if ((t) > MAX_PROPERTY_VALUE) (t) = MAX_PROPERTY_VALUE; }
    STAT_LIMIT(gpGlobals->g.PlayerRoles.rgwMaxHP[wPlayerRole]);
    STAT_LIMIT(gpGlobals->g.PlayerRoles.rgwMaxMP[wPlayerRole]);
    STAT_LIMIT(gpGlobals->g.PlayerRoles.rgwAttackStrength[wPlayerRole]);

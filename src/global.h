@@ -84,6 +84,8 @@ extern "C"
 // maximum number of level
 #define     MAX_LEVELS                   99
 
+#define     MAX_PROPERTY_VALUE           9999
+
 // status of characters
 typedef enum tagSTATUS
 {
@@ -565,6 +567,8 @@ typedef struct tagGLOBALVARS
    LPOBJECTDESC     lpObjectDesc;
 #endif
    DWORD            dwFrameNum;
+
+   BOOL             fLockTeamMember;
 } GLOBALVARS, *LPGLOBALVARS;
 
 typedef struct tagSAVEDGAME
