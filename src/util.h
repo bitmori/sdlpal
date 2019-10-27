@@ -105,6 +105,8 @@ UTIL_IOS_SavePath(
     
 #endif
 
+#define DLOG(format, args...)  puts(va(format, args))
+
 #define _PATH_LOG           PAL_PREFIX "log.txt"
 #define LOG_EMERG           0 /* system is unusable */
 #define LOG_ALERT           1 /* action must be taken immediately */

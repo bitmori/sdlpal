@@ -23,9 +23,12 @@
 
 //#define PAL_WIN95          1 // not valid for now
 #define PAL_CLASSIC        1
-#define PAL_HIDPI          1
+//#define PAL_HIDPI          0
 //#define PAL_SHOW_LOGO      1
 //#define PAL_SHOW_CRANES    1
+
+#define __MIN(a, b) (((a) < (b)) ? (a) : (b))
+#define __MAX(a, b) (((a) > (b)) ? (a) : (b))
 
 #ifdef __cplusplus
 extern "C"

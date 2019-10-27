@@ -73,6 +73,7 @@ extern "C"
 
 // maximum number of objects
 #define     MAX_OBJECTS                  600
+#define     MAX_EX_OBJECTS               600
 
 // maximum number of event objects (should be somewhat more than the original,
 // as there are some modified versions which has more)
@@ -422,6 +423,22 @@ typedef struct tagENEMYPOS
 // Exp. points needed for the next level
 typedef WORD LEVELUPEXP, *LPLEVELUPEXP;
 
+// game data that will be loaded from extra data file (sdlpal.toml)
+typedef struct tagEXGAMEDATA
+{
+   int                     nEventObject;
+
+   int                     nStore;
+
+   int                     nEnemy;
+
+   int                     nEnemyTeam;
+
+   int                     nMagic;
+
+   int                     nLevelUpMagic;
+} EXGAMEDATA, *LPEXGAMEDATA;
+
 // game data which is available in data files.
 typedef struct tagGAMEDATA
 {
@@ -429,7 +446,7 @@ typedef struct tagGAMEDATA
    int                     nEventObject;
 
    SCENE                   rgScene[MAX_SCENES];
-   OBJECT                  rgObject[MAX_OBJECTS];
+   OBJECT                  rgObject[MAX_OBJECTS + MAX_EX_OBJECTS];
 
    LPSCRIPTENTRY           lprgScriptEntry;
    int                     nScriptEntry;
@@ -519,6 +536,7 @@ typedef struct tagGLOBALVARS
    LPMRBSTATE       mrb; // MRuby
    FILES            f;
    GAMEDATA         g;
+   EXGAMEDATA       ex;
 
    BYTE             bCurrentSaveSlot;    // current save slot (1-5)
    int              iCurMainMenuItem;    // current main menu item number

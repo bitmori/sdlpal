@@ -65,6 +65,7 @@ PAL_InitGlobals(
 
    // open mruby
    gpGlobals->mrb = mrb_open();
+   PAL_InitMRubyCallbacks();
    PAL_InitMRubyHandlers();
    //
    // Open files
@@ -129,6 +130,8 @@ PAL_FreeGlobals(
       free(gpGlobals->g.lprgMagic);
       free(gpGlobals->g.lprgBattleField);
       free(gpGlobals->g.lprgLevelUpMagic);
+
+      PAL_FreeExtraGameData();
 
       //
       // Free the object description data
@@ -540,6 +543,7 @@ PAL_InitGameData(
 --*/
 {
    PAL_InitGlobalGameData();
+   PAL_InitExtraGameData();
 
    gpGlobals->bCurrentSaveSlot = (BYTE)iSaveSlot;
 

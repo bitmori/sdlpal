@@ -41,7 +41,7 @@ static const char g_rgszAdditionalWords[][WORD_LENGTH + 1] = {
    {0xA4, 0x54, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // 3
    {0xA5, 0x7C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // 4
    {0xA4, 0xAD, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // 5
-   {0xAC, 0xF5, 0xA5, 0xDB, 0xB8, 0x7D, 0xA5, 0xBB, 0x00, 0x00, 0x00}, // 紅ACF5 石A5DB 腳B87D 本A5BB
+   {0xAC, 0xF5, 0xA5, 0xDB, 0xA4, 0xE2, 0xA8, 0xF7, 0x00, 0x00, 0x00}, // 紅ACF5 石A5DB A4E2 卷A8F7
    {0xBC, 0xC4, 0xB1, 0xA1, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // 情報 0xB1, 0xA1, 0xB3, 0xF8 || 敵情 0xBC, 0xC4, 0xB1, 0xA1
    {0xAC, 0x72, 0xA7, 0xDC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // 毒抗 0xAC, 0x72, 0xA7, 0xDC
    {0xA7, 0xAF, 0xA4, 0x4F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // 妖力	0xA7, 0xAF, 0xA4, 0x4F
@@ -58,10 +58,12 @@ static const char g_rgszAdditionalWords[][WORD_LENGTH + 1] = {
 typedef struct tagTEXTLIB
 {
    LPBYTE          lpWordBuf;
+   LPBYTE          lpExWordBuf;
    LPBYTE          lpMsgBuf;
    LPDWORD         lpMsgOffset;
 
    int             nWords;
+   int             nExWords;
    int             nMsgs;
 
    int             nCurrentDialogLine;
@@ -226,6 +228,33 @@ PAL_FreeText(
       free(g_TextLib.lpWordBuf);
       g_TextLib.lpWordBuf = NULL;
    }
+
+   if (g_TextLib.lpExWordBuf != NULL)
+   {
+      free(g_TextLib.lpExWordBuf);
+      g_TextLib.lpExWordBuf = NULL;
+   }
+}
+
+static WORD PAL_GetExWord(WORD wNumWord, LPSTR buf) {
+   WORD wNumExWord = wNumWord - MAX_OBJECTS;
+   if (wNumExWord < 0 || wNumExWord >= g_TextLib.nExWords) {
+      return -1;
+   }
+   memcpy(buf, &g_TextLib.lpExWordBuf[(wNumWord - MAX_OBJECTS) * WORD_LENGTH], WORD_LENGTH);
+   buf[WORD_LENGTH] = '\0';
+
+   //
+   // Remove the trailing spaces
+   //
+   trim(buf);
+
+   if ((strlen(buf) & 1) != 0 && buf[strlen(buf) - 1] == '1')
+   {
+      buf[strlen(buf) - 1] = '\0';
+   }
+
+   return 0;
 }
 
 LPCSTR
@@ -256,6 +285,10 @@ PAL_GetWord(
 
    if (wNumWord >= g_TextLib.nWords)
    {
+      WORD ex = PAL_GetExWord(wNumWord, buf);
+      if (ex == 0) {
+         return buf;
+      }
       return NULL;
    }
 
