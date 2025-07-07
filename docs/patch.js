@@ -18,9 +18,9 @@ CAPI.WASM_change_magic_data(0x2E, 5, 75, 0);
 CAPI.WASM_change_magic_efx(0x2E, 0x1D, 0xfff8, 4, 0x8B, 0);
 
 // 忘剑五诀修正
-CAPI.WASM_edit_script(0x2b87, 0x2b, 0, 581, 0);
-CAPI.WASM_edit_script(0x2b88, 0xFFFF, 0x25E8, 0, 0);
-CAPI.WASM_edit_script(0x2b89, 0xFFFF, 0x25E9, 0, 0);
+// CAPI.WASM_edit_script(0x2b87, 0x2b, 0, 581, 0);
+// CAPI.WASM_edit_script(0x2b88, 0xFFFF, 0x25E8, 0, 0);
+// CAPI.WASM_edit_script(0x2b89, 0xFFFF, 0x25E9, 0, 0);
 
 // 怪物重生
 CAPI.WASM_edit_script(0x9CCF, 0x52, 0, 0, 0);
