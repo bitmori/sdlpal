@@ -25,6 +25,18 @@ CAPI.WASM_edit_script(0x2b89, 0xFFFF, 0x25E9, 0, 0);
 // 怪物重生
 CAPI.WASM_edit_script(0x9CCF, 0x52, 0, 0, 0);
 
+// 毒烈度都降低到98
+// 禁止隐身
+CAPI.WASM_change_obj(577, 0, 98);
+// 一忘皆空
+CAPI.WASM_change_obj(581, 0, 98);
+// 圣灵祝福中
+CAPI.WASM_change_obj(582, 0, 98);
+// 无心
+CAPI.WASM_change_obj(583, 0, 98);
+// 寂灭天下
+CAPI.WASM_change_obj(587, 0, 98);
+
 // 怪物不再出现
 // CAPI.WASM_edit_script(0x9CCF, 0x49, 0xFFFF, 0, 0);
 alert("补丁成功！");
