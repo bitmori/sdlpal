@@ -25,18 +25,21 @@ CAPI.WASM_change_magic_efx(0x2E, 0x1D, 0xfff8, 4, 0x8B, 0);
 // 怪物重生
 CAPI.WASM_edit_script(0x9CCF, 0x52, 0, 0, 0);
 
-// 毒烈度都降低到98
-// 禁止隐身
-CAPI.WASM_change_obj(577, 0, 98);
-// 一忘皆空
-CAPI.WASM_change_obj(581, 0, 98);
-// 圣灵祝福中
-CAPI.WASM_change_obj(582, 0, 98);
-// 无心
-CAPI.WASM_change_obj(583, 0, 98);
-// 寂灭天下
-CAPI.WASM_change_obj(587, 0, 98);
+// 圣灵祝福可以解除万蚁
+CAPI.WASM_edit_script(0x6599, 0x2C, 0, 4, 0);
 
+// 毒烈度都降低到98
+// 禁止隐身 - 显示，但是复活不可解
+CAPI.WASM_change_obj(577, 0, 98);
+// 无心 - 显示，但是复活不可解
+CAPI.WASM_change_obj(583, 0, 98);
+
+// 一忘皆空 - 显示，复活解除
+CAPI.WASM_change_obj(581, 0, 97);
+// 圣灵祝福中 - 显示，复活解除
+CAPI.WASM_change_obj(582, 0, 97);
+// 寂灭天下 - 显示，复活解除
+CAPI.WASM_change_obj(587, 0, 97);
 // 怪物不再出现
 // CAPI.WASM_edit_script(0x9CCF, 0x49, 0xFFFF, 0, 0);
 alert("补丁成功！");
